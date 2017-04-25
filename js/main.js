@@ -70,4 +70,12 @@ $('.filters a').on('click',function(){
 //-----------------filterizr----------------
 $('.works').filterizr();
 
+//-----------------ScrollReveal----------------
+// Changing the defaults
+window.sr = ScrollReveal({ reset: true, duration: 1000  });
+// Customizing a reveal set
+sr.reveal('.hgroup', { origin: 'left',distance: '400px'});
+// sr.reveal('.timeline', { duration: 1000 });
+sr.reveal('.duties', { origin: 'top',distance: '50px' ,delay: 800});
+
 });
