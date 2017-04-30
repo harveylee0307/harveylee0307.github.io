@@ -1,81 +1,101 @@
 $(function() {
 
 
+
     /** Banner Parallax */
-  $(window).scroll(function() {
+    $(window).scroll(function() {
         scrollBanner();
     });
 
- /** Parallax Banner Function  */
-    var scrollBanner = function() {        
-       /** Get the scroll position of the page */
+    /** Parallax Banner Function  */
+    var scrollBanner = function() {
+        /** Get the scroll position of the page */
         scrollPos = $(this).scrollTop();
 
         /** Scroll and fade out the banner text */
         $('.topText').css({
-            'opacity' : 1 - ( scrollPos / 250 ),
-            '-ms-filter' : 'progid:DXImageTransform.Microsoft.Alpha(Opacity=' + 1 - ( scrollPos / 300 ) + ')'
+            'opacity': 1 - (scrollPos / 250),
+            '-ms-filter': 'progid:DXImageTransform.Microsoft.Alpha(Opacity=' + 1 - (scrollPos / 300) + ')'
         });
 
-        if($('.topText').css('opacity') ==0){
-        		$('.topText').css('position','relative');
+        if ($('.topText').css('opacity') == 0) {
+            $('.topText').css('position', 'relative');
+        } else {
+            $('.topText').css('position', 'fixed');
         }
-        	else{
-	$('.topText').css('position','fixed');
-        	}
-
-     
     };
 
-$('.filters a').on('click',function(){
-	$(this).siblings().removeClass('active');
-	$(this).addClass('active');
 
+    $('.menu_icon').on('click', function() {
+        $('nav').slideToggle(500);
+        $(this).toggleClass('active');
+    })
 
-});
+    $(window).resize(function() {
+        if ($(window).width() > 768) {
+            $('nav').css('display', 'block');
+        }
+    });
 
-//-----------------slick----------------
-				$('.skills').slick({
-  dots: false,
-  infinite: false,
-  arrows: false,
-  slidesToShow: 4,
-  slidesToScroll: 4,
-  responsive: [
-    
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
+    var lastScrollVal = 0
+    $(window).scroll(function(e) {
+        var scrollVal = $(this).scrollTop();
+
+        if (scrollVal > lastScrollVal) {
+            $('header').addClass('scrollUp')
+        } else {
+            $('header').removeClass('scrollUp')
+        }
+        lastScrollVal = scrollVal;
+    });
+
+    $('.filters_btns a').on('click', function() {
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+    });
+
+    //-----------------slick----------------
+    $('.skills').slick({
+        dots: false,
         infinite: false,
-          dots: true,
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: false,
-         dots: true,
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-});
+        arrows: false,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        responsive: [
 
-//-----------------filterizr----------------
-$('.works').filterizr();
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: false,
+                    dots: true,
+                }
+            }, {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: false,
+                    dots: true,
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
 
-//-----------------ScrollReveal----------------
-// Changing the defaults
-window.sr = ScrollReveal({ reset: true, duration: 1000  });
-// Customizing a reveal set
-sr.reveal('.hgroup', { origin: 'left',distance: '400px'});
-// sr.reveal('.timeline', { duration: 1000 });
-sr.reveal('.duties', { origin: 'top',distance: '50px' ,delay: 800});
+    //-----------------filterizr----------------
+    $('.works').filterizr();
 
+    //-----------------ScrollReveal----------------
+    // Changing the defaults
+    window.sr = ScrollReveal({ duration: 1000 });
+    // reset: true,
+    // Customizing a reveal set
+    sr.reveal('.hgroup', { origin: 'left', distance: '400px' });
+    // sr.reveal('.timeline', { duration: 1000 });
+    sr.reveal('.duties span', { origin: 'top', distance: '50px', delay: 800 });
+    sr.reveal('.duties p', { origin: 'top', distance: '50px', delay: 1000 });
 });
