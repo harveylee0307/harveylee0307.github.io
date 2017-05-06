@@ -1,6 +1,33 @@
 $(function() {
 
 
+    var lastScrollVal = 0
+    $(window).scroll(function(e) {
+        var scrollVal = $(this).scrollTop();
+        if (scrollVal > lastScrollVal) {
+            $('header').addClass('scrollUp');
+            $('nav').removeClass('show');
+
+        } else {
+            $('header').removeClass('scrollUp');
+        }
+        lastScrollVal = scrollVal;
+    });
+
+    $('.menu_icon').on('click', function() {
+        $('nav').toggleClass('show');
+        $(this).toggleClass('active');
+    })
+
+    /*Scroll transition to anchor*/
+    $("nav a").on('click', function(e) {
+        var nhref = e.target.href;
+        var hash = nhref.substring(nhref.indexOf("#") + 1);
+        $('html, body').animate({
+            scrollTop: $('#' + hash).offset().top
+        }, 500);
+        return false;
+    });
 
     /** Banner Parallax */
     $(window).scroll(function() {
@@ -26,33 +53,7 @@ $(function() {
     };
 
 
-    $('.menu_icon').on('click', function() {
-        $('nav').slideToggle(500);
-        $(this).toggleClass('active');
-    })
 
-    $(window).resize(function() {
-        if ($(window).width() > 768) {
-            $('nav').css('display', 'block');
-        }
-    });
-
-    var lastScrollVal = 0
-    $(window).scroll(function(e) {
-        var scrollVal = $(this).scrollTop();
-
-        if (scrollVal > lastScrollVal) {
-            $('header').addClass('scrollUp')
-        } else {
-            $('header').removeClass('scrollUp')
-        }
-        lastScrollVal = scrollVal;
-    });
-
-    $('.filters_btns a').on('click', function() {
-        $(this).siblings().removeClass('active');
-        $(this).addClass('active');
-    });
 
     //-----------------slick----------------
     $('.skills').slick({
@@ -87,7 +88,36 @@ $(function() {
     });
 
     //-----------------filterizr----------------
-    $('.works').filterizr();
+    // $('.works').filterizr();
+
+
+    $('.filters_btns a').on('click', function() {
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+
+
+        var tagName = $(this).data('filter'),
+            $filterItem = $('.works .work')
+
+
+        if (tagName == 'all') {
+            $filterItem.addClass('is-animated').fadeIn();
+
+        } else {
+
+            $filterItem.removeClass('is-animated').fadeOut().promise().done(function() {
+
+                $filterItem.filter('[data-category=' + tagName + ']').addClass('is-animated').fadeIn();
+
+
+            });
+        }
+
+
+    });
+
+
+
 
     //-----------------ScrollReveal----------------
     // Changing the defaults

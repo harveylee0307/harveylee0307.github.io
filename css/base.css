@@ -56,7 +56,6 @@ header .menu_icon {
   font-size: 20px;
 }
 header nav {
-  display: block;
   float: right;
 }
 header nav ul {
@@ -93,8 +92,10 @@ header nav ul li a:hover {
     background: #F5F5F5;
   }
   header nav {
-    display: none;
+    height: 0;
+    overflow: hidden;
     float: none;
+    transition: height .5s;
   }
   header nav ul {
     width: 100%;
@@ -107,6 +108,9 @@ header nav ul li a:hover {
   }
   header nav ul li a:hover {
     border-bottom: none;
+  }
+  header nav.show {
+    height: 300px;
   }
 }
 .wrapper {
@@ -454,4 +458,18 @@ header nav ul li a:hover {
 
 footer {
   text-align: center;
+}
+
+/*------------------------ Contact section ------------------------*/
+.is-animated {
+  animation: .6s zoom-in;
+}
+
+@keyframes zoom-in {
+  0% {
+    transform: scale(0.1);
+  }
+  100% {
+    transform: none;
+  }
 }
