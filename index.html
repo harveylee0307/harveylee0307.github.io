@@ -20,6 +20,12 @@
     <![endif]-->
     <!--     <link rel="stylesheet" href="css/normalize.css"> -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/monokai-sublime.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+    <script>
+    hljs.initHighlightingOnLoad();
+    </script>
     <!-- pure -->
     <link rel="stylesheet" href="//yui.yahooapis.com/pure/0.6.0/pure-min.css">
     <link rel="stylesheet" href="//yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
@@ -40,7 +46,7 @@
 <body>
     <header>
         <div class="wrapper">
-            <div class="logo">Harvey Lee</div>
+            <div class="logo"><span class="icon-h-square"></span>Harvey Lee</div>
             <span class="menu_icon icon-navicon"></span>
             <nav>
                 <ul>
@@ -55,25 +61,39 @@
     <section id="Top">
         <div class="topText">
             <h1>I'm Harvey Lee</h1>
-            <span class="type">快樂的碼農 / 小鎮姑娘 / WEB DEVELOPER</span>
+            <span class="type">&lt; 快樂的碼農 / 小鎮姑娘 / WEB DEVELOPER &gt;</span>
         </div>
     </section>
     <section id="About">
-        <div class="pure-g">
-            <div class="pure-u-1">
-                <div class="about-section">
-                    <!--                     <div class="avatar-section">
+        <div class="about-section">
+            <div class="container">
+                <div class="section-title font-big ">
+                    <h3>&lt;<span>About Me</span>&sol;&gt;</h3>
+                </div>
+                <div class="about-content">
+                    <div class="avatar-section">
                         <img class="aboutImg" src="images/portfoliopic.jpg" alt="">
-                    </div> -->
-                    <div class="about-content">
-                        <h3>About Me</h3>
-                        <div class="about-text">
-                            <p>三草斯西星高的積極面物股上的新完藝的一解的題金住出只一於片市力現存北文子四實個天一球……法相買臺局即，所我就易想最好類一金風要中論，而這力化升。為頭巴！我著文有據牛音世們有。重體自而，議式文看院飛場反成花。</p>
-                            <ul>
-                                <li><span class="icon-birthday-cake"></span>李皓偉 / Harvey Lee</li>
-                                <li><span class="icon-birthday-cake"></span>1989/03/07</li>
-                            </ul>
-                        </div>
+                    </div>
+                    <div class="about-text">
+
+<p>相臺能唱景裡裝新，統記野這好面長，紅書著……興一不者！象些用錢藝舞文心起型、自是提益認關前河，指便朋權存遊不人頭這安機我？密則的會造節康上，面重風手。
+
+工嚴大、包萬們根標子因這，是我牛沒東而性草音孩人外洲驚山解會停已氣月灣這下停就除能鄉心以種火那力在下；好有樓又夫車、增好問反資：直影滿際充思斯裡中本隨，一到。</p>
+
+
+                                     <!--   <pre>
+                        <code class="javascript">
+function AboutMe(first,last,birthday,age){
+  this.name = {李,皓偉};
+  this.birthday = 1989/03/07;
+  this.age = 28;
+  this.greeting = function() {
+    alert('Hi! I\'m ' + this.name.first + '.');
+  };
+};
+                          </code>
+                        </pre> -->
+
                     </div>
                 </div>
             </div>
@@ -81,6 +101,51 @@
     </section>
     <section id="Portfolio">
         <div class="pure-g">
+            <div class="pure-u-1 bg_Bbg">
+                <div class="">
+<!--                     <div class="section-title font-big">
+                        <h3>SKILL</h3>
+                    </div> -->
+                    <div class="skills">
+                        <div class="skillItem bg_Rd">
+                            <div>
+                                <i class="icon icon-html-five2"></i>
+                            </div>
+                            <div>
+                                <h4>HTML</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                            </div>
+                        </div>
+                        <div class="skillItem bg_Bl">
+                            <div>
+                                <i class="icon icon-css3"></i>
+                            </div>
+                            <div>
+                                <h4>CSS</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                            </div>
+                        </div>
+                        <div class="skillItem bg_Gn">
+                            <div>
+                                <i class="icon icon-code"></i>
+                            </div>
+                            <div>
+                                <h4>JavaScript</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                            </div>
+                        </div>
+                        <div class="skillItem bg_Yall">
+                            <div>
+                                <i class="icon icon-bar-chart"></i>
+                            </div>
+                            <div>
+                                <h4>Google Analytics</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="pure-u-1">
                 <div class="container">
                     <div class="section-title font-big font-Gn">
@@ -123,61 +188,16 @@
                     </div>
                 </div>
             </div>
-            <div class="pure-u-1 bg_Gn">
-                <div class="container">
-                    <div class="section-title font-big">
-                        <h3>SKILL</h3>
-                    </div>
-                    <div class="skills">
-                        <div class="skillItem bg_Rd">
-                            <div>
-                                <i class="icon icon-html-five2"></i>
-                            </div>
-                            <div>
-                                <h4>HTML</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-                            </div>
-                        </div>
-                        <div class="skillItem bg_Bl">
-                            <div>
-                                <i class="icon icon-css3"></i>
-                            </div>
-                            <div>
-                                <h4>CSS</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-                            </div>
-                        </div>
-                        <div class="skillItem bg_Gn">
-                            <div>
-                                <i class="icon icon-code"></i>
-                            </div>
-                            <div>
-                                <h4>JavaScript</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-                            </div>
-                        </div>
-                        <div class="skillItem bg_Yall">
-                            <div>
-                                <i class="icon icon-bar-chart"></i>
-                            </div>
-                            <div>
-                                <h4>Google Analytics</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
     <div class="curriculumVitae">
         <a class="btn" href="">下載履歷表</a>
         <a class="btn" href="">列印履歷表</a>
     </div>
-    <section id="Works">
+    <section id="Works" class="bg_Bbg">
         <div class="container">
             <div class="section-title font-big font-Yall">
-                <h3>Works</h3>
+                <h3>&lt;<span>Works</span>&sol;&gt;</h3>
             </div>
             <div class="filters_btns">
                 <a class="btn active" href="javascript:;" data-filter="all">ALL</a>

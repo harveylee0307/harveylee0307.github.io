@@ -36,6 +36,11 @@ $color-yellow: #FBCD65;
 $color-red: #F92672;
 $color-green: #4CCC93;
 $color-blue: #4F99D3;
+$color-bggray:#151718;
+$color-llgray:#23241F;
+$color-lgray:#181D22;
+$color-dgray:#14191C;
+$color-bgray:#161F27;
 h1,
 h2,
 h3,
@@ -50,6 +55,7 @@ a {
     text-decoration: none;
 }
 
+pre,
 body {
     margin: 0;
     padding: 0;
@@ -76,7 +82,7 @@ header {
     z-index: 99;
     height: $header-height;
     top: 0;
-    background: rgba(255, 255, 255, 1);
+    background: $color-lgray;
     width: 100%;
     box-shadow: 0 0 8px rgba(0, 0, 0, .2);
     @include transition(all);
@@ -86,6 +92,15 @@ header {
     .logo {
         line-height: $header-height;
         float: left;
+        color: #CCC;
+        font-size: 22px;
+        font-weight: bold;
+        span {
+            color: $color-blue;
+            font-size: 25px;
+            margin: 10px;
+            vertical-align: text-top;
+        }
     }
     .menu_icon {
         display: none;
@@ -107,21 +122,21 @@ header {
                 position: absolute;
                 bottom: 0;
                 content: "";
-                border-top: 4px solid #F5F5F5;
+                border-top: 4px solid #0D1011;
                 width: 0px;
                 @include transition(all)
             }
             &:hover {
                 &:after {
                     width: 100%;
-                    border-top-color:$color-green;
+                    border-top-color: $color-blue;
                 }
             }
         }
         ul li a {
-            color: #666;
+            color: #CCC;
             display: block;
-            height: 51px;
+            height: 50px;
             line-height: $header-height;
             padding: 0 20px;
             font-weight: bold;
@@ -136,14 +151,14 @@ header {
             display: inline-block;
         }
         .menu_icon {
-            color:#FFF;
+            color: #CCC;
             float: right;
             display: block;
             height: $header-height;
             line-height: $header-height;
             width: 55px;
             text-align: center;
-            background: $color-green;
+            background: #14191C;
         }
         nav {
             height: 0;
@@ -152,7 +167,7 @@ header {
             @include transition(all);
             ul {
                 width: 100%;
-                background: rgba(255, 255, 255, 0.8);
+                background: $color-llgray;
             }
             ul li {
                 display: block;
@@ -197,6 +212,10 @@ header {
     background: $color-blue;
 }
 
+.bg_Bbg {
+    background: $color-lgray;
+}
+
 .btn {
     display: inline-block;
     border: 1px solid #A3A3A3;
@@ -214,7 +233,7 @@ header {
 /*------------------------ Top section ------------------------*/
 
 #Top {
-    background: url("../images/bg/topbg.jpg") ;
+    background: url("../images/bg/topbg.jpg");
     height: 65vh;
     background-attachment: fixed;
     background-size: cover;
@@ -259,33 +278,93 @@ header {
 // }
 
 /*------------------------ about section ------------------------*/
-.about-section {
-    background: url("../images/bg/p2.png")  no-repeat -180% 0, url("../images/bg/p3.png")  no-repeat 200% 0;;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    transition:all 2s;
-    &.bgrun{
-        background-position: 0 0,100% 0;
-    }
 
+#About {
+    background: $color-bggray;
 }
 
-.about-content {
-    width: 75%;
-   h3 {
-        font-size: 45px;
-        color: $color-red;
+.about-section {
+    padding:20px 0;
+    // background: url("../images/bg/p2.png") no-repeat -180% 0, url("../images/bg/p3.png") no-repeat 200% 0;
+    // height: 60vh;
+    transition: all 2s;
+    &.bgrun {
+        background-position: 0 0, 100% 0;
+    }
+    h3 {
+        color: #CCC;
+        span {
+            color: $color-red;
+        }
     }
     p {
         font-size: 14px;
         line-height: 1.7em;
-        color: #A3A3A3;
+        color: #CCC;
     }
-    .about-text {
-        background-color: rgba(255, 255, 255, 0.5);
-        padding: 15px;
+    .about-content {
+        text-align: center;      
+        .avatar-section {
+            display: inline-block;
+            .aboutImg {
+                max-width: 150px;
+                box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+                border-radius: 5px;
+                vertical-align: middle;
+                margin: 20px;
+            }
+        }
+        .about-text {
+            width: 75%;
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+       
+            padding: 15px;
+            position: relative;
+            &:after {
+                right: 100%;
+                top: 50%;
+                border: solid transparent;
+                content: "";
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+                border-color: rgba(136, 183, 213, 0);
+                border-right-color: rgba(255, 255, 255, 0.1);
+                border-width: 15px;
+                margin-top: -15px;
+            }
+            >* {
+                text-align: left;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@include range-width(0,
+768px) {
+    .about-section {
+        .about-content {
+            .avatar-section {
+                .aboutImg {}
+            }
+            .about-text {
+                &:after {
+                    ;
+                    top: 0;
+                    left: 50%;
+                    border-right-color: rgba(136, 183, 213, 0);
+                    border-bottom-color: rgba(255, 255, 255, 0.1);
+                    border-width: 15px;
+                    margin-left: -15px;
+                }
+            }
+        }
     }
 }
 
@@ -364,9 +443,6 @@ header {
         justify-content: center;
         min-height: 380px;
     }
-    .about-content {
-        width: 90%;
-    }
     .timeline {
         &:before {
             left: 23px;
@@ -398,7 +474,7 @@ header {
         display: inline-block;
         text-align: center;
         padding: 15px;
-        margin: 10px;
+        // margin: 10px;
         background: #FFF;
         h4 {
             margin: 10px;
@@ -550,9 +626,9 @@ header {
 
 footer {
     text-align: center;
-    color:#C8C8C8;
-    background:#6A6A6A;
-    padding:20px 0;
+    color: #CCC;
+    background: $color-llgray;
+    padding: 20px 0;
 }
 
 
