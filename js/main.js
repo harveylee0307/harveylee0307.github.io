@@ -7,7 +7,7 @@ $(function() {
         if (scrollVal > lastScrollVal) {
             $('header').addClass('scrollUp');
             $('nav').removeClass('show');
-
+             $('.menu_icon').addClass('icon-navicon').removeClass('icon-remove');
         } else {
             $('header').removeClass('scrollUp');
         }
@@ -16,8 +16,8 @@ $(function() {
 
     $('.menu_icon').on('click', function() {
         $('nav').toggleClass('show');
-        $(this).toggleClass('active');
-    })
+        $(this).toggleClass('active').toggleClass('icon-navicon').toggleClass('icon-remove');
+        })
 
     /*Scroll transition to anchor*/
     $("nav a").on('click', function(e) {
@@ -32,6 +32,16 @@ $(function() {
     /** Banner Parallax */
     $(window).scroll(function() {
         scrollBanner();
+
+
+        var bottom_of_object = $('#About').offset().top + $('#About').outerHeight();
+        var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+        if(bottom_of_window>bottom_of_object){
+$('.about-section').addClass('bgrun');
+        }
+
+
     });
 
     /** Parallax Banner Function  */
@@ -41,7 +51,7 @@ $(function() {
 
         /** Scroll and fade out the banner text */
         $('.topText').css({
-            'opacity': 1 - (scrollPos / 250),
+            'opacity': 1 - (scrollPos / 210),
             '-ms-filter': 'progid:DXImageTransform.Microsoft.Alpha(Opacity=' + 1 - (scrollPos / 300) + ')'
         });
 
@@ -51,6 +61,8 @@ $(function() {
             $('.topText').css('position', 'fixed');
         }
     };
+
+
 
 
 
