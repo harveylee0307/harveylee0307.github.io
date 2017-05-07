@@ -132,12 +132,12 @@ $(function() {
 
 
     //-----------------ScrollReveal----------------
-    // Changing the defaults
-    window.sr = ScrollReveal({ duration: 1000 });
-    // reset: true,
-    // Customizing a reveal set
-    sr.reveal('.hgroup', { origin: 'left', distance: '400px' });
-    // sr.reveal('#Portfolio', { duration: 1000 });
-    sr.reveal('.duties span', { origin: 'top', distance: '50px', delay: 800 });
-    sr.reveal('.duties p', { origin: 'top', distance: '50px', delay: 1000 });
+    // // Changing the defaults
+    // window.sr = ScrollReveal({ duration: 1000 });
+    // // reset: true,
+    // // Customizing a reveal set
+    // sr.reveal('.hgroup', { origin: 'left', distance: '400px' });
+    // // sr.reveal('#Portfolio', { duration: 1000 });
+    // sr.reveal('.duties span', { origin: 'top', distance: '50px', delay: 800 });
+    // sr.reveal('.duties p', { origin: 'top', distance: '50px', delay: 1000 });
 });
