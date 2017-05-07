@@ -34,12 +34,12 @@ $(function() {
         scrollBanner();
 
 
-        var bottom_of_object = $('#About').offset().top + $('#About').outerHeight();
-        var bottom_of_window = $(window).scrollTop() + $(window).height();
+        // var bottom_of_object = $('#Portfolio').offset().top + $('#Portfolio').outerHeight();
+        // var bottom_of_window = $(window).scrollTop() + $(window).height();
 
-        if(bottom_of_window>bottom_of_object){
-$('.about-section').addClass('bgrun');
-        }
+        // if(bottom_of_window>bottom_of_object){
+        //   $('#Portfolio').addClass('bgrun');
+        // }
 
 
     });
@@ -137,7 +137,7 @@ $('.about-section').addClass('bgrun');
     // reset: true,
     // Customizing a reveal set
     sr.reveal('.hgroup', { origin: 'left', distance: '400px' });
-    // sr.reveal('.timeline', { duration: 1000 });
+    // sr.reveal('#Portfolio', { duration: 1000 });
     sr.reveal('.duties span', { origin: 'top', distance: '50px', delay: 800 });
     sr.reveal('.duties p', { origin: 'top', distance: '50px', delay: 1000 });
 });

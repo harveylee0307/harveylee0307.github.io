@@ -21,8 +21,8 @@
     <!--     <link rel="stylesheet" href="css/normalize.css"> -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Highlight.js -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/monokai-sublime.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/monokai-sublime.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
     <script>
     hljs.initHighlightingOnLoad();
     </script>
@@ -67,7 +67,7 @@
     <section id="About">
         <div class="about-section">
             <div class="container">
-                <div class="section-title font-big ">
+                <div class="section-title font-big">
                     <h3>&lt;<span>About Me</span>&sol;&gt;</h3>
                 </div>
                 <div class="about-content">
@@ -75,25 +75,37 @@
                         <img class="aboutImg" src="images/portfoliopic.jpg" alt="">
                     </div>
                     <div class="about-text">
-
-<p>相臺能唱景裡裝新，統記野這好面長，紅書著……興一不者！象些用錢藝舞文心起型、自是提益認關前河，指便朋權存遊不人頭這安機我？密則的會造節康上，面重風手。
-
-工嚴大、包萬們根標子因這，是我牛沒東而性草音孩人外洲驚山解會停已氣月灣這下停就除能鄉心以種火那力在下；好有樓又夫車、增好問反資：直影滿際充思斯裡中本隨，一到。</p>
-
-
-                                     <!--   <pre>
-                        <code class="javascript">
-function AboutMe(first,last,birthday,age){
-  this.name = {李,皓偉};
-  this.birthday = 1989/03/07;
-  this.age = 28;
-  this.greeting = function() {
-    alert('Hi! I\'m ' + this.name.first + '.');
-  };
-};
-                          </code>
-                        </pre> -->
-
+                        <div class="talkbubble">
+                            <pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zh-Hant-TW&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;AboutMe&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;不想侷限於平面，只當個做做Banner的設計，希望從工作不斷精進自己的專業能力與實務經驗，期待能與有共同目標的團隊一起工作，接觸更多樣化的主題，拓展更豐富的視野與思考模式，成為名符其實的前端工程師。&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+<code class="javascript">var aboutMe = {
+    Name:['李皓偉','Harvey Lee'],
+    Age: 28,/*1989-03-07*/
+    <span class="hljs-attr">Greeting</span>:function(){
+    <span class="hljs-attribute">alert</span>('Hi 我是'+ this.Name[1] +'今年'+ this.Age);
+    };
+aboutMe.Greeting();
+</code>
+<code class="css">#Harvey {
+  height:169; <span class="hljs-comment">//這麼高</span>
+  width:68; <span class="hljs-comment">//這麼胖</span>
+}
+#Harvey .girlfriend{
+  display:none;
+  opacity:0;
+  visibility: hidden;
+  <span class="hljs-comment">//嗚嗚嗚</span>
+}
+</code></pre></div>
                     </div>
                 </div>
             </div>
@@ -101,9 +113,9 @@ function AboutMe(first,last,birthday,age){
     </section>
     <section id="Portfolio">
         <div class="pure-g">
-            <div class="pure-u-1 bg_Bbg">
-                <div class="">
-<!--                     <div class="section-title font-big">
+            <div class="pure-u-1 bg_Bg">
+                <div class="container">
+                    <!--                     <div class="section-title font-big">
                         <h3>SKILL</h3>
                     </div> -->
                     <div class="skills">
@@ -113,7 +125,7 @@ function AboutMe(first,last,birthday,age){
                             </div>
                             <div>
                                 <h4>HTML</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                                <p>使用Sublime text進行開發，了解語意化(Semantic)HTML，建立符合W3C及SEO的網頁結構。</p>
                             </div>
                         </div>
                         <div class="skillItem bg_Bl">
@@ -122,7 +134,7 @@ function AboutMe(first,last,birthday,age){
                             </div>
                             <div>
                                 <h4>CSS</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                                <p>可使用SCSS編寫，應用偽元素及CSS3動態效果，針對不同裝置螢幕，調整版面，建立RWD響應式網頁。</p>
                             </div>
                         </div>
                         <div class="skillItem bg_Gn">
@@ -131,7 +143,7 @@ function AboutMe(first,last,birthday,age){
                             </div>
                             <div>
                                 <h4>JavaScript</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                                <p>使用jQurey操作DOM元素，處裡靜態頁面呈現，平時多使用現成套件修改，Api串接Ajax資料處理尚無經驗。</p>
                             </div>
                         </div>
                         <div class="skillItem bg_Yall">
@@ -140,7 +152,7 @@ function AboutMe(first,last,birthday,age){
                             </div>
                             <div>
                                 <h4>Google Analytics</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                                <p>了解基礎GA分析資料，並於2017年獲得GAIQ認證，操作GTM(Google Tag Manager)埋設程式碼。</p>
                             </div>
                         </div>
                     </div>
@@ -148,8 +160,8 @@ function AboutMe(first,last,birthday,age){
             </div>
             <div class="pure-u-1">
                 <div class="container">
-                    <div class="section-title font-big font-Gn">
-                        <h3>Exprience</h3>
+                    <div class="section-title font-big">
+                        <h3>&lt;<span>Exprience</span>&sol;&gt;</h3>
                     </div>
                     <div class="timeline">
                         <div class="timeItem">
@@ -158,7 +170,7 @@ function AboutMe(first,last,birthday,age){
                                 <h6><i class="icon-calendar"></i>2016/04 - 2017/06</h6>
                             </div>
                             <div class="duties">
-                                <span>管理師(前端設計師)</span>
+                                <span>管理師</span>
                                 <p>
                                     1.釐清PM需求並依規格文件，進行切版、前端元件開發 2.與後端工程師協作，解決使用者介面跨平台、瀏覽器問題 3.協助設計部視覺設計師解決網頁切板問題 4.改善、維護和優化現有平台相關程式碼之品質、效能，以提供更好用戶體驗 5.GA tracking埋設、GTM操作</p>
                             </div>
@@ -190,13 +202,13 @@ function AboutMe(first,last,birthday,age){
             </div>
         </div>
     </section>
-    <div class="curriculumVitae">
+    <!--     <div class="curriculumVitae">
         <a class="btn" href="">下載履歷表</a>
         <a class="btn" href="">列印履歷表</a>
-    </div>
-    <section id="Works" class="bg_Bbg">
+    </div> -->
+    <section id="Works">
         <div class="container">
-            <div class="section-title font-big font-Yall">
+            <div class="section-title font-big">
                 <h3>&lt;<span>Works</span>&sol;&gt;</h3>
             </div>
             <div class="filters_btns">

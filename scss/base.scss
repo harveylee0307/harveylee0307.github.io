@@ -55,7 +55,21 @@ a {
     text-decoration: none;
 }
 
-pre,
+pre {
+    margin: 0;
+    padding: 0;
+    white-space: pre-wrap;
+    /* css-3 */
+    white-space: -moz-pre-wrap;
+    /* Mozilla, since 1999 */
+    white-space: -pre-wrap;
+    /* Opera 4-6 */
+    white-space: -o-pre-wrap;
+    /* Opera 7 */
+    word-wrap: break-word;
+    /* Internet Explorer 5.5+ */
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -167,7 +181,7 @@ header {
             @include transition(all);
             ul {
                 width: 100%;
-                background: $color-llgray;
+                background: rgba(21, 23, 24, 0.8);
             }
             ul li {
                 display: block;
@@ -213,6 +227,10 @@ header {
 }
 
 .bg_Bbg {
+    background: $color-llgray;
+}
+
+.bg_Bg {
     background: $color-lgray;
 }
 
@@ -234,14 +252,14 @@ header {
 
 #Top {
     background: url("../images/bg/topbg.jpg");
-    height: 65vh;
+    height: 100vh;
     background-attachment: fixed;
     background-size: cover;
     .topText {
         position: fixed;
         width: 100%;
         text-align: center;
-        padding-top: 30vh;
+        padding-top: 40vh;
         line-height: 3.3em;
     }
     .type {
@@ -252,7 +270,6 @@ header {
 }
 
 .section-title {
-    border-bottom: 1px solid #efefef;
     padding: 20px 10px 10px 20px;
     position: relative;
     &.font-big {
@@ -284,13 +301,7 @@ header {
 }
 
 .about-section {
-    padding:20px 0;
-    // background: url("../images/bg/p2.png") no-repeat -180% 0, url("../images/bg/p3.png") no-repeat 200% 0;
-    // height: 60vh;
-    transition: all 2s;
-    &.bgrun {
-        background-position: 0 0, 100% 0;
-    }
+    padding: 20px 0;
     h3 {
         color: #CCC;
         span {
@@ -303,39 +314,56 @@ header {
         color: #CCC;
     }
     .about-content {
-        text-align: center;      
+        text-align: center;
         .avatar-section {
             display: inline-block;
+            vertical-align:top;
+            margin:0 20px 0 0;
             .aboutImg {
-                max-width: 150px;
+                max-width: 200px;
                 box-shadow: 0 0 8px rgba(0, 0, 0, .2);
                 border-radius: 5px;
-                vertical-align: middle;
-                margin: 20px;
+            }
+        }
+        pre {
+            font-size: 14px;
+            code {
+                border-radius: 5px;
+            }
+            .hljs-keyword{
+                color: #66d9ef
+            }
+            .hljs-selector-id {
+                color: #F6AA11
+            }
+            .hljs-selector-pseudo {
+                color: #a6e22e
             }
         }
         .about-text {
-            width: 75%;
-            display: inline-block;
-            background-color: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 0 8px rgba(0, 0, 0, .2);
-       
-            padding: 15px;
-            position: relative;
-            &:after {
-                right: 100%;
-                top: 50%;
-                border: solid transparent;
-                content: "";
-                height: 0;
-                width: 0;
-                position: absolute;
-                pointer-events: none;
-                border-color: rgba(136, 183, 213, 0);
-                border-right-color: rgba(255, 255, 255, 0.1);
-                border-width: 15px;
-                margin-top: -15px;
+            .talkbubble {
+                background-color: rgba(255, 255, 255, 0.1);
+                border-radius: 5px;
+                box-shadow: 0 0 8px rgba(0, 0, 0, .2);
+                padding: 15px;
+                position: relative;
+                &:after {
+                    right: 100%;
+                    top: 10%;
+                    border: solid transparent;
+                    content: "";
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    pointer-events: none;
+                    border-color: rgba(136, 183, 213, 0);
+                    border-right-color: rgba(255, 255, 255, 0.1);
+                    border-width: 15px;
+                    margin-top: -15px;
+                }
             }
+            width: 65%;
+            display: inline-block;
             >* {
                 text-align: left;
             }
@@ -351,17 +379,23 @@ header {
     .about-section {
         .about-content {
             .avatar-section {
-                .aboutImg {}
+                  margin:0  0 20px 0;
+                .aboutImg {
+
+                }
             }
             .about-text {
-                &:after {
-                    ;
-                    top: 0;
-                    left: 50%;
-                    border-right-color: rgba(136, 183, 213, 0);
-                    border-bottom-color: rgba(255, 255, 255, 0.1);
-                    border-width: 15px;
-                    margin-left: -15px;
+                width: 90%;
+                .talkbubble {
+                    &:after {
+                        ;
+                        top: -15px;
+                        left: 50%;
+                        border-right-color: rgba(136, 183, 213, 0);
+                        border-bottom-color: rgba(255, 255, 255, 0.1);
+                        border-width: 15px;
+                        margin-left: -15px;
+                    }
                 }
             }
         }
@@ -370,6 +404,18 @@ header {
 
 
 /*------------------------ profile section ------------------------*/
+
+#Portfolio {
+    .section-title {
+        border-bottom: 1px solid #ededed;
+    }
+    h3 {
+        color: #CCC;
+        span {
+            color: $color-green;
+        }
+    }
+}
 
 .timeline {
     position: relative;
@@ -388,7 +434,7 @@ header {
         padding-left: 300px;
         padding-top: 17px;
         position: relative;
-        margin: 60px 0px;
+        margin-bottom: 60px;
         &:before {
             content: "";
             position: absolute;
@@ -449,6 +495,7 @@ header {
         }
         .timeItem {
             padding-left: 30px;
+            margin-bottom: 30px;
             &:before {
                 left: 0;
             }
@@ -465,28 +512,29 @@ header {
 /*------------------------ Skill section ------------------------*/
 
 .skills {
-    height: 25vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    // height: 25vh;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
     .skillItem {
         position: relative;
         display: inline-block;
         text-align: center;
         padding: 15px;
-        // margin: 10px;
-        background: #FFF;
+        margin: 10px;
+        color: #CCC;
+        background: $color-lgray;
         h4 {
-            margin: 10px;
+            margin: 15px;
         }
         ~ .skillItem {
             &:after {
                 content: "";
-                background: $color-gray;
+                // background: #CCC;
                 left: 0;
-                top: 30px;
+                top: 40px;
                 position: absolute;
-                height: calc(100% - 30px*2);
+                height: calc(100% - 40px*2);
                 width: 1px;
             }
         }
@@ -518,6 +566,16 @@ header {
 
 
 /*------------------------ Works section ------------------------*/
+
+#Works {
+    background: $color-bggray;
+    h3 {
+        color: #CCC;
+        span {
+            color: $color-yellow;
+        }
+    }
+}
 
 .works {
     .work {
@@ -597,9 +655,7 @@ header {
 
 /*------------------------ Contact section ------------------------*/
 
-#Contact {
-    // background: rgba(0, 0, 0, .03);
-}
+#Contact {}
 
 .contact-form {
     position: relative;
@@ -627,7 +683,7 @@ header {
 footer {
     text-align: center;
     color: #CCC;
-    background: $color-llgray;
+    background: $color-lgray;
     padding: 20px 0;
 }
 

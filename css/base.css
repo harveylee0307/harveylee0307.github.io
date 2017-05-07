@@ -13,7 +13,21 @@ a {
   text-decoration: none;
 }
 
-pre,
+pre {
+  margin: 0;
+  padding: 0;
+  white-space: pre-wrap;
+  /* css-3 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -134,7 +148,7 @@ header nav ul li a {
   }
   header nav ul {
     width: 100%;
-    background: #23241F;
+    background: rgba(21, 23, 24, 0.8);
   }
   header nav ul li {
     display: block;
@@ -182,6 +196,10 @@ header nav ul li a {
 }
 
 .bg_Bbg {
+  background: #23241F;
+}
+
+.bg_Bg {
   background: #181D22;
 }
 
@@ -205,7 +223,7 @@ header nav ul li a {
 /*------------------------ Top section ------------------------*/
 #Top {
   background: url("../images/bg/topbg.jpg");
-  height: 65vh;
+  height: 100vh;
   background-attachment: fixed;
   background-size: cover;
 }
@@ -213,7 +231,7 @@ header nav ul li a {
   position: fixed;
   width: 100%;
   text-align: center;
-  padding-top: 30vh;
+  padding-top: 40vh;
   line-height: 3.3em;
 }
 #Top .type {
@@ -223,7 +241,6 @@ header nav ul li a {
 }
 
 .section-title {
-  border-bottom: 1px solid #efefef;
   padding: 20px 10px 10px 20px;
   position: relative;
 }
@@ -247,10 +264,6 @@ header nav ul li a {
 
 .about-section {
   padding: 20px 0;
-  transition: all 2s;
-}
-.about-section.bgrun {
-  background-position: 0 0, 100% 0;
 }
 .about-section h3 {
   color: #CCC;
@@ -268,25 +281,43 @@ header nav ul li a {
 }
 .about-section .about-content .avatar-section {
   display: inline-block;
+  vertical-align: top;
+  margin: 0 20px 0 0;
 }
 .about-section .about-content .avatar-section .aboutImg {
-  max-width: 150px;
+  max-width: 200px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  vertical-align: middle;
-  margin: 20px;
+}
+.about-section .about-content pre {
+  font-size: 14px;
+}
+.about-section .about-content pre code {
+  border-radius: 5px;
+}
+.about-section .about-content pre .hljs-keyword {
+  color: #66d9ef;
+}
+.about-section .about-content pre .hljs-selector-id {
+  color: #F6AA11;
+}
+.about-section .about-content pre .hljs-selector-pseudo {
+  color: #a6e22e;
 }
 .about-section .about-content .about-text {
-  width: 75%;
+  width: 65%;
   display: inline-block;
+}
+.about-section .about-content .about-text .talkbubble {
   background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
   padding: 15px;
   position: relative;
 }
-.about-section .about-content .about-text:after {
+.about-section .about-content .about-text .talkbubble:after {
   right: 100%;
-  top: 50%;
+  top: 10%;
   border: solid transparent;
   content: "";
   height: 0;
@@ -306,8 +337,14 @@ header nav ul li a {
 }
 
 @media screen and (max-width: 767px) and (min-width: 0) {
-  .about-section .about-content .about-text:after {
-    top: 0;
+  .about-section .about-content .avatar-section {
+    margin: 0  0 20px 0;
+  }
+  .about-section .about-content .about-text {
+    width: 90%;
+  }
+  .about-section .about-content .about-text .talkbubble:after {
+    top: -15px;
     left: 50%;
     border-right-color: rgba(136, 183, 213, 0);
     border-bottom-color: rgba(255, 255, 255, 0.1);
@@ -316,6 +353,16 @@ header nav ul li a {
   }
 }
 /*------------------------ profile section ------------------------*/
+#Portfolio .section-title {
+  border-bottom: 1px solid #ededed;
+}
+#Portfolio h3 {
+  color: #CCC;
+}
+#Portfolio h3 span {
+  color: #4CCC93;
+}
+
 .timeline {
   position: relative;
   padding: 15px;
@@ -334,7 +381,7 @@ header nav ul li a {
   padding-left: 300px;
   padding-top: 17px;
   position: relative;
-  margin: 60px 0px;
+  margin-bottom: 60px;
 }
 .timeline .timeItem:before {
   content: "";
@@ -391,6 +438,7 @@ header nav ul li a {
   }
   .timeline .timeItem {
     padding-left: 30px;
+    margin-bottom: 30px;
   }
   .timeline .timeItem:before {
     left: 0;
@@ -402,29 +450,24 @@ header nav ul li a {
   }
 }
 /*------------------------ Skill section ------------------------*/
-.skills {
-  height: 25vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .skills .skillItem {
   position: relative;
   display: inline-block;
   text-align: center;
   padding: 15px;
-  background: #FFF;
+  margin: 10px;
+  color: #CCC;
+  background: #181D22;
 }
 .skills .skillItem h4 {
-  margin: 10px;
+  margin: 15px;
 }
 .skills .skillItem ~ .skillItem:after {
   content: "";
-  background: #F5F5F5;
   left: 0;
-  top: 30px;
+  top: 40px;
   position: absolute;
-  height: calc(100% - 30px*2);
+  height: calc(100% - 40px*2);
   width: 1px;
 }
 .skills .skillItem .icon {
@@ -444,6 +487,16 @@ header nav ul li a {
 }
 
 /*------------------------ Works section ------------------------*/
+#Works {
+  background: #151718;
+}
+#Works h3 {
+  color: #CCC;
+}
+#Works h3 span {
+  color: #FBCD65;
+}
+
 .works .work {
   display: inline-block;
   text-align: center;
@@ -557,7 +610,7 @@ header nav ul li a {
 footer {
   text-align: center;
   color: #CCC;
-  background: #23241F;
+  background: #181D22;
   padding: 20px 0;
 }
 
