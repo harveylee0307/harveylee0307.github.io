@@ -301,7 +301,7 @@ header {
 }
 
 .about-section {
-    padding: 20px 0;
+    padding-bottom: 20px;
     h3 {
         color: #CCC;
         span {
@@ -525,8 +525,11 @@ header {
         color: #CCC;
         background: $color-lgray;
         h4 {
-            margin: 15px;
+            margin: 10px;
         }
+        p{
+        font-size:14px;
+                    }
         ~ .skillItem {
             &:after {
                 content: "";

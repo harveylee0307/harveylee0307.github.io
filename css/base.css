@@ -263,7 +263,7 @@ header nav ul li a {
 }
 
 .about-section {
-  padding: 20px 0;
+  padding-bottom: 20px;
 }
 .about-section h3 {
   color: #CCC;
@@ -460,7 +460,10 @@ header nav ul li a {
   background: #181D22;
 }
 .skills .skillItem h4 {
-  margin: 15px;
+  margin: 10px;
+}
+.skills .skillItem p {
+  font-size: 14px;
 }
 .skills .skillItem ~ .skillItem:after {
   content: "";
