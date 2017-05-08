@@ -8,7 +8,9 @@ $(function() {
             $('header').addClass('scrollUp');
             $('nav').removeClass('show');
              $('.menu_icon').addClass('icon-navicon').removeClass('icon-remove');
-        } else {
+        }else if(scrollVal = 0){
+ $('header').removeClass('scrollUp');
+        }else {
             $('header').removeClass('scrollUp');
         }
         lastScrollVal = scrollVal;
