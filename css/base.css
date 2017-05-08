@@ -235,16 +235,15 @@ header nav ul li a {
 #Top {
   height: 100vh;
 }
-#Top:before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
+#Top .fx-IMG {
+  background-image: url("../images/bg/topbg.jpg");
   width: 100%;
   height: 100%;
-  z-index: -1;
-  background: url(../images/bg/topbg.jpg) 0 0 no-repeat fixed !important;
+  position: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
+  z-index: -1;
 }
 #Top .topText {
   position: fixed;

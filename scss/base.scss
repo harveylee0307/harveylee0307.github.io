@@ -272,23 +272,20 @@ header {
     // top:0;
     // left:0;
     // background-attachment: fixed;
+    // background-size: cover;
 
-&:before{
-    content:"";
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    z-index:-1;
-    background: url(../images/bg/topbg.jpg) 0 0 no-repeat fixed !important;
-    background-size: cover;
+.fx-IMG{
+
+  background-image: url("../images/bg/topbg.jpg");
+  width: 100%;
+      height: 100%;
+  position: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
 
 }
-
-
-
-
 
     .topText {
         position: fixed;
