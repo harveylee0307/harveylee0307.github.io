@@ -230,9 +230,17 @@ header nav ul li a {
 }
 /*------------------------ Top section ------------------------*/
 #Top {
-  background: url("../images/bg/topbg.jpg");
   height: 100vh;
-  background-attachment: fixed;
+}
+#Top:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: url(../images/bg/topbg.jpg) 0 0 no-repeat fixed !important;
   background-size: cover;
 }
 #Top .topText {
@@ -387,7 +395,7 @@ header nav ul li a {
   bottom: 0;
   content: "";
   left: 270px;
-  top: 0;
+  top: 20;
   width: 2px;
   position: absolute;
   height: 100%;
@@ -407,7 +415,7 @@ header nav ul li a {
   height: 13px;
   border-radius: 18px;
   left: 247px;
-  top: 50px;
+  top: 35px;
 }
 .timeline .timeItem .duties {
   position: relative;
@@ -428,7 +436,7 @@ header nav ul li a {
   border-color: rgba(136, 183, 213, 0);
   border-right-color: rgba(255, 255, 255, 0.1);
   border-width: 15px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 .timeline .timeItem .duties span {
   font-size: 16px;
@@ -442,7 +450,7 @@ header nav ul li a {
   position: absolute;
 }
 .timeline .timeItem .hgroup h4 {
-  font-size: 16px;
+  font-size: 17px;
   color: #4F99D3;
 }
 .timeline .timeItem .hgroup h6 {
