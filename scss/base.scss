@@ -266,26 +266,28 @@ header {
 /*------------------------ Top section ------------------------*/
 
 #Top {
-    // background: url("../images/bg/topbg.jpg");
+    background: url("../images/bg/topbg.jpg");
     height: 100vh;
     // position: fixed;
+    // z-index:-1;
     // top:0;
     // left:0;
-    // background-attachment: fixed;
-    // background-size: cover;
 
-.fx-IMG{
+    background-attachment: fixed;
+    background-size: cover;
 
-  background-image: url("../images/bg/topbg.jpg");
-  width: 100%;
-      height: 100%;
-  position: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -1;
+// .fx-IMG{
 
-}
+//   background-image: url("../images/bg/topbg.jpg");
+//   width: 100%;
+//       height: 100%;
+//   position: fixed;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   z-index: -1;
+
+// }
 
     .topText {
         position: fixed;
