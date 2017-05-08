@@ -249,6 +249,12 @@ header {
                 display: block;
                 text-align: center;
                 // border-bottom: 1px solid #A3A3A3;
+                &:hover {
+                    display:none;
+                &:after {
+                   content:'';
+                }
+            }
             }
             &.show {
                 height: 300px;
