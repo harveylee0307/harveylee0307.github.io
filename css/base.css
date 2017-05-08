@@ -224,11 +224,8 @@ header nav ul li a {
     display: block;
     text-align: center;
   }
-  header nav ul li:hover {
-    display: none;
-  }
   header nav ul li:hover:after {
-    content: '';
+    display: none;
   }
   header nav.show {
     height: 300px;
