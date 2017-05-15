@@ -261,6 +261,9 @@ header nav ul li a {
   padding: 20px 10px 10px 20px;
   position: relative;
 }
+.section-title h3 {
+  font-size: 45px;
+}
 .section-title.font-big {
   font-size: 45px;
 }
@@ -544,6 +547,7 @@ header nav ul li a {
 /*------------------------ Works section ------------------------*/
 #Works {
   background: #181D22;
+  padding-bottom: 10px;
 }
 #Works h3 {
   color: #CCC;
@@ -641,6 +645,7 @@ header nav ul li a {
 /*------------------------ Contact section ------------------------*/
 #Contact {
   background: #151718;
+  padding-bottom: 20px;
 }
 #Contact h3 {
   color: #CCC;
@@ -655,27 +660,36 @@ header nav ul li a {
 }
 .contact-form .input-group {
   background-color: #2C2E2F;
-  padding: 10px 15px;
-  margin: 0 0 14px;
+  padding: 10px 5px;
+  width: 90%;
+  margin: 0 auto 14px;
   color: #666666;
   border: none;
   border-radius: 5px;
 }
+.contact-form .input-group i {
+  vertical-align: middle;
+}
 .contact-form input,
 .contact-form textarea {
   font-size: 13px;
-  width: 88%;
+  width: 90%;
   border: none;
   overflow: hidden;
   resize: none;
   background: #2C2E2F;
 }
 .contact-form textarea {
+  vertical-align: top;
   margin: 0;
 }
 .contact-form .submit {
   cursor: pointer;
   border-radius: 5px;
+  padding: 10px;
+  color: #FFF;
+  font-size: 14px;
+  background: #FBCD65;
 }
 
 footer {
