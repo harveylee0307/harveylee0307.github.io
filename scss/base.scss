@@ -55,6 +55,14 @@ a {
     text-decoration: none;
 }
 
+button,
+input,
+textarea {
+    &:focus {
+        outline: 0;
+    }
+}
+
 pre {
     margin: 0;
     padding: 0;
@@ -134,7 +142,7 @@ h2 {
     display: inline-block;
     border: 1px solid #A3A3A3;
     padding: 5px 10px;
-    font-size:14px;
+    font-size: 14px;
     border-radius: 5px;
     color: #A3A3A3;
     @include transition(all);
@@ -250,10 +258,10 @@ header {
                 text-align: center;
                 // border-bottom: 1px solid #A3A3A3;
                 &:hover {
-                  &:after {
-                 display:none;
+                    &:after {
+                        display: none;
+                    }
                 }
-            }
             }
             &.show {
                 height: 300px;
@@ -272,23 +280,18 @@ header {
     // z-index:-1;
     // top:0;
     // left:0;
-
     background-attachment: fixed;
     background-size: cover;
-
-// .fx-IMG{
-
-//   background-image: url("../images/bg/topbg.jpg");
-//   width: 100%;
-//       height: 100%;
-//   position: fixed;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   z-index: -1;
-
-// }
-
+    // .fx-IMG{
+    //   background-image: url("../images/bg/topbg.jpg");
+    //   width: 100%;
+    //       height: 100%;
+    //   position: fixed;
+    //   background-position: center;
+    //   background-repeat: no-repeat;
+    //   background-size: cover;
+    //   z-index: -1;
+    // }
     .topText {
         position: fixed;
         width: 100%;
@@ -449,7 +452,7 @@ header {
     h3 {
         color: #CCC;
         span {
-            color:$color-blue;
+            color: $color-blue;
         }
     }
 }
@@ -503,9 +506,9 @@ header {
                 border-width: 15px;
                 margin-top: 20px;
             }
-            span{
+            span {
                 font-size: 16px;
-                color:$color-blue;
+                color: $color-blue;
             }
         }
         .hgroup {
@@ -522,7 +525,8 @@ header {
                 font-size: 14px;
                 margin: 5px 0;
                 font-weight: normal;
-                color:#A180FF;;
+                color: #A180FF;
+                ;
             }
             i {
                 font-size: 20px;
@@ -665,7 +669,7 @@ header {
                 box-sizing: border-box;
                 position: absolute;
                 bottom: 0;
-                background-color:$color-green;
+                background-color: $color-green;
                 width: 100%;
                 padding: 10px 0 10px 10px;
                 text-align: left;
@@ -685,7 +689,7 @@ header {
                     @include transition(all);
                     &:hover {
                         background: #FFF;
-                        color:$color-green;
+                        color: $color-green;
                     }
                 }
             }
@@ -704,7 +708,7 @@ header {
 }
 
 .filters_btns {
-    margin: 15px;
+    margin: 10px;
     .btn {
         margin: 5px 0;
         &.active {
@@ -725,28 +729,44 @@ header {
 
 /*------------------------ Contact section ------------------------*/
 
-#Contact {}
+#Contact {
+    background: $color-bggray;
+    h3 {
+        color: #CCC;
+        span {
+            color: $color-yellow;
+        }
+    }
+}
 
 .contact-form {
+    text-align: center;
     position: relative;
-    padding: 20px;
-    input[type="text"],
+    .input-group {
+        background-color: #2C2E2F;
+        padding: 10px 15px;
+         margin: 0 0 14px;
+        color: #666666;
+        border: none;
+        border-radius: 5px;
+    }
+    input,
     textarea {
         font-size: 13px;
         width: 88%;
-        border-radius: 10px;
-        color: #666666;
-        border: 1px solid #efefef;
-        padding: 10px 15px;
-        margin: 0 0 14px;
+        border: none;
+       
         overflow: hidden;
+        resize: none;
+        background: #2C2E2F;
     }
     textarea {
-        resize: none;
+        margin: 0;
+        &:before {}
     }
     .submit {
         cursor: pointer;
-        border-radius: 25px;
+        border-radius: 5px;
     }
 }
 

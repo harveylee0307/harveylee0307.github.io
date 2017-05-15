@@ -13,6 +13,12 @@ a {
   text-decoration: none;
 }
 
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 0;
+}
+
 pre {
   margin: 0;
   padding: 0;
@@ -615,7 +621,7 @@ header nav ul li a {
 }
 
 .filters_btns {
-  margin: 15px;
+  margin: 10px;
 }
 .filters_btns .btn {
   margin: 5px 0;
@@ -633,27 +639,43 @@ header nav ul li a {
 }
 
 /*------------------------ Contact section ------------------------*/
-.contact-form {
-  position: relative;
-  padding: 20px;
+#Contact {
+  background: #151718;
 }
-.contact-form input[type="text"],
+#Contact h3 {
+  color: #CCC;
+}
+#Contact h3 span {
+  color: #FBCD65;
+}
+
+.contact-form {
+  text-align: center;
+  position: relative;
+}
+.contact-form .input-group {
+  background-color: #2C2E2F;
+  padding: 10px 15px;
+  margin: 0 0 14px;
+  color: #666666;
+  border: none;
+  border-radius: 5px;
+}
+.contact-form input,
 .contact-form textarea {
   font-size: 13px;
   width: 88%;
-  border-radius: 10px;
-  color: #666666;
-  border: 1px solid #efefef;
-  padding: 10px 15px;
-  margin: 0 0 14px;
+  border: none;
   overflow: hidden;
+  resize: none;
+  background: #2C2E2F;
 }
 .contact-form textarea {
-  resize: none;
+  margin: 0;
 }
 .contact-form .submit {
   cursor: pointer;
-  border-radius: 25px;
+  border-radius: 5px;
 }
 
 footer {
