@@ -792,6 +792,7 @@ header {
     input,
     select,
     textarea {
+        -webkit-appearance: none;
         color: #CCC;
         width: 100%;
         box-sizing: border-box;

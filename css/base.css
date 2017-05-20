@@ -704,6 +704,7 @@ header nav ul li a {
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
+  -webkit-appearance: none;
   color: #CCC;
   width: 100%;
   box-sizing: border-box;
