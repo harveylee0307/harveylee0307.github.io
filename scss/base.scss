@@ -274,24 +274,25 @@ header {
 /*------------------------ Top section ------------------------*/
 
 #Top {
-    background: url("../images/bg/topbg.jpg");
+    // background: url("../images/bg/topbg.jpg");
     height: 100vh;
+    // background-attachment: fixed;
+    // background-size: cover;
     // position: fixed;
     // z-index:-1;
     // top:0;
     // left:0;
-    background-attachment: fixed;
-    background-size: cover;
-    // .fx-IMG{
-    //   background-image: url("../images/bg/topbg.jpg");
-    //   width: 100%;
-    //       height: 100%;
-    //   position: fixed;
-    //   background-position: center;
-    //   background-repeat: no-repeat;
-    //   background-size: cover;
-    //   z-index: -1;
-    // }
+
+    .fx-IMG{
+      background-image: url("../images/bg/topbg.jpg");
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -1;
+    }
     .topText {
         position: fixed;
         width: 100%;
@@ -429,8 +430,7 @@ header {
             .about-text {
                 width: 90%;
                 .talkbubble {
-                    &:after {
-                        ;
+                    &:after {                    
                         top: -15px;
                         left: 50%;
                         border-right-color: rgba(136, 183, 213, 0);
@@ -780,6 +780,7 @@ header {
             top: 15px;
             left: 15px;
             color: #757575;
+            font-size: 20px;
         }
         .form_alert_text {
             position: absolute;
@@ -812,6 +813,12 @@ header {
     }
     textarea {
         vertical-align: top;
+    }
+    select{
+        &:before{
+            content: "\f0b1";
+           
+        }
     }
     .submit {
         cursor: pointer;
