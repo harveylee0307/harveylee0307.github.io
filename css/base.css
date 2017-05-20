@@ -551,8 +551,8 @@ header nav ul li a {
   color: #4F99D3;
 }
 
-.slick-dots {
-  position: inherit;
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
 }
 
 /*------------------------ Works section ------------------------*/
