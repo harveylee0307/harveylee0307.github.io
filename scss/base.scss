@@ -309,7 +309,7 @@ header {
 .section-title {
     padding: 20px 10px 10px 20px;
     position: relative;
-    h3{
+    h3 {
         font-size: 45px;
     }
     &.font-big {
@@ -462,7 +462,7 @@ header {
 
 .timeline {
     position: relative;
-    padding: 15px;
+    padding: 40px 15px 15px 15px;
     &:before {
         background: linear-gradient(to bottom, #373939 1%, #373939 75%, #151718 100%);
         bottom: 0;
@@ -476,7 +476,7 @@ header {
     .timeItem {
         padding-left: 300px;
         position: relative;
-        margin-bottom: 15px;
+        margin-bottom: 50px;
         &:before {
             content: "";
             position: absolute;
@@ -646,7 +646,7 @@ header {
 
 #Works {
     background: $color-lgray;
-    padding-bottom:10px;
+    padding-bottom: 20px;
     h3 {
         color: #CCC;
         span {
@@ -656,6 +656,7 @@ header {
 }
 
 .works {
+    padding: 0 5px;
     .work {
         display: inline-block;
         text-align: center;
@@ -663,7 +664,7 @@ header {
         .workItem {
             overflow: hidden;
             position: relative;
-            margin: 10px;
+            margin: 5px;
             img {
                 width: 100%;
                 display: block;
@@ -680,7 +681,7 @@ header {
                 opacity: 0;
                 transform: translateY(100%);
                 @include transition(all);
-                h3 {
+                h4 {
                     color: white;
                     font-weight: bold;
                 }
@@ -712,6 +713,7 @@ header {
 }
 
 .filters_btns {
+    text-align: center;
     margin: 10px;
     .btn {
         margin: 5px 0;
@@ -735,7 +737,7 @@ header {
 
 #Contact {
     background: $color-bggray;
-    padding-bottom:20px;
+    padding-bottom: 20px;
     h3 {
         color: #CCC;
         span {
@@ -744,43 +746,79 @@ header {
     }
 }
 
-.contact-form {
-    text-align: center;
-    position: relative;
-    .input-group {
-        background-color: #2C2E2F;
-        padding: 10px 5px;
-         width: 90%;
-         margin: 0 auto 14px;
-        color: #666666;
-        border: none;
-        border-radius: 5px;
-    i{
-            vertical-align: middle;
+.contactInfo {
+    padding:0 20px;
+    p {
+        font-size: 14px;
+        line-height: 1.5em;
+        color: #CCC;
     }
+    .info{
+       font-size: 20px;
+       font-weight: bold;
+       border-bottom:1px dashed #CCC;
+       margin: 10px 0;
+       padding-bottom: 5px;
+       i{
+        color: $color-yellow;
+        vertical-align: middle;
+       font-size:26px;
+
+       }
+    }
+}
+
+.contact-form {
+    padding: 0 15px;
+    .input-group {
+        position: relative;
+        margin-bottom: 5px;
+        padding:5px;
+        box-sizing:border-box;
+        i {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            color: #757575;
+        }
+        .form_alert_text {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 13px;
+            color: $color-yellow;
+        }
     }
     input,
+    select,
     textarea {
-        font-size: 13px;
-        width: 90%;
-        border: none;       
+        color: #CCC;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 14px;
+        border-radius: 5px;
+        padding: 10px 0px 10px 35px;
+        border: none;
         overflow: hidden;
         resize: none;
         background: #2C2E2F;
+        &.checkOK {
+            border: 1px solid #49d267;
+        }
+        &.checkFalse {
+            border: 1px solid $color-yellow;
+        }
     }
     textarea {
         vertical-align: top;
-        margin: 0;
-        &:before {}
-
     }
     .submit {
         cursor: pointer;
         border-radius: 5px;
-        padding:10px;
-        color:#FFF;
+        padding: 10px;
+        color: #FFF;
         font-size: 14px;
-        background:$color-yellow;
+        background: $color-yellow;
     }
 }
 

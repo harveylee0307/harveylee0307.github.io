@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?7cm1hq');
-  src:  url('fonts/icomoon.eot?7cm1hq#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?7cm1hq') format('truetype'),
-    url('fonts/icomoon.woff?7cm1hq') format('woff'),
-    url('fonts/icomoon.svg?7cm1hq#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?4iz2h8');
+  src:  url('fonts/icomoon.eot?4iz2h8#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?4iz2h8') format('truetype'),
+    url('fonts/icomoon.woff?4iz2h8') format('woff'),
+    url('fonts/icomoon.svg?4iz2h8#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,23 +24,26 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-phone:before {
-  content: "\e942";
+.icon-keyboard_arrow_right:before {
+  content: "\e903";
 }
-.icon-briefcase:before {
-  content: "\e9ae";
+.icon-cross:before {
+  content: "\e901";
+}
+.icon-check:before {
+  content: "\e900";
+}
+.icon-chat:before {
+  content: "\e902";
 }
 .icon-html-five2:before {
   content: "\eae5";
 }
+.icon-user:before {
+  content: "\e971";
+}
 .icon-bar-chart:before {
   content: "\f080";
-}
-.icon-bar-chart-o:before {
-  content: "\f080";
-}
-.icon-code:before {
-  content: "\f121";
 }
 .icon-css3:before {
   content: "\f13c";
@@ -48,31 +51,30 @@
 .icon-close:before {
   content: "\f00d";
 }
-.icon-remove:before {
-  content: "\f00d";
-}
-.icon-times:before {
-  content: "\f00d";
+.icon-clock-o:before {
+  content: "\f017";
 }
 .icon-calendar:before {
   content: "\f073";
 }
+.icon-phone:before {
+  content: "\f095";
+}
+.icon-briefcase:before {
+  content: "\f0b1";
+}
 .icon-bars:before {
   content: "\f0c9";
 }
-.icon-navicon:before {
-  content: "\f0c9";
-}
-.icon-reorder:before {
-  content: "\f0c9";
+.icon-envelope:before {
+  content: "\f0e0";
 }
 .icon-h-square:before {
   content: "\f0fd";
 }
-.icon-birthday-cake:before {
-  content: "\f1fd";
+.icon-code:before {
+  content: "\f121";
 }
-.icon-user-circle-o:before {
-  content: "\f2be";
+.icon-commenting:before {
+  content: "\f27a";
 }
-

@@ -392,7 +392,7 @@ header nav ul li a {
 
 .timeline {
   position: relative;
-  padding: 15px;
+  padding: 40px 15px 15px 15px;
 }
 .timeline:before {
   background: linear-gradient(to bottom, #373939 1%, #373939 75%, #151718 100%);
@@ -407,7 +407,7 @@ header nav ul li a {
 .timeline .timeItem {
   padding-left: 300px;
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 50px;
 }
 .timeline .timeItem:before {
   content: "";
@@ -547,7 +547,7 @@ header nav ul li a {
 /*------------------------ Works section ------------------------*/
 #Works {
   background: #181D22;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 #Works h3 {
   color: #CCC;
@@ -556,6 +556,9 @@ header nav ul li a {
   color: #a6e22e;
 }
 
+.works {
+  padding: 0 5px;
+}
 .works .work {
   display: inline-block;
   text-align: center;
@@ -564,7 +567,7 @@ header nav ul li a {
 .works .work .workItem {
   overflow: hidden;
   position: relative;
-  margin: 10px;
+  margin: 5px;
 }
 .works .work .workItem img {
   width: 100%;
@@ -591,7 +594,7 @@ header nav ul li a {
   -ms-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
 }
-.works .work .workItem .workItemText h3 {
+.works .work .workItem .workItemText h4 {
   color: white;
   font-weight: bold;
 }
@@ -625,6 +628,7 @@ header nav ul li a {
 }
 
 .filters_btns {
+  text-align: center;
   margin: 10px;
 }
 .filters_btns .btn {
@@ -654,34 +658,75 @@ header nav ul li a {
   color: #FBCD65;
 }
 
+.contactInfo {
+  padding: 0 20px;
+}
+.contactInfo p {
+  font-size: 14px;
+  line-height: 1.5em;
+  color: #CCC;
+}
+.contactInfo .info {
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px dashed #CCC;
+  margin: 10px 0;
+  padding-bottom: 5px;
+}
+.contactInfo .info i {
+  color: #FBCD65;
+  vertical-align: middle;
+  font-size: 26px;
+}
+
 .contact-form {
-  text-align: center;
-  position: relative;
+  padding: 0 15px;
 }
 .contact-form .input-group {
-  background-color: #2C2E2F;
-  padding: 10px 5px;
-  width: 90%;
-  margin: 0 auto 14px;
-  color: #666666;
-  border: none;
-  border-radius: 5px;
+  position: relative;
+  margin-bottom: 5px;
+  padding: 5px;
+  box-sizing: border-box;
 }
 .contact-form .input-group i {
-  vertical-align: middle;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: #757575;
+}
+.contact-form .input-group .form_alert_text {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 13px;
+  color: #FBCD65;
 }
 .contact-form input,
+.contact-form select,
 .contact-form textarea {
-  font-size: 13px;
-  width: 90%;
+  color: #CCC;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 10px 0px 10px 35px;
   border: none;
   overflow: hidden;
   resize: none;
   background: #2C2E2F;
 }
+.contact-form input.checkOK,
+.contact-form select.checkOK,
+.contact-form textarea.checkOK {
+  border: 1px solid #49d267;
+}
+.contact-form input.checkFalse,
+.contact-form select.checkFalse,
+.contact-form textarea.checkFalse {
+  border: 1px solid #FBCD65;
+}
 .contact-form textarea {
   vertical-align: top;
-  margin: 0;
 }
 .contact-form .submit {
   cursor: pointer;
