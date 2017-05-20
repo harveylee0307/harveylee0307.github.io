@@ -7,7 +7,7 @@ $(function() {
         if (scrollVal > lastScrollVal) {
             $('header').addClass('scrollUp');
             $('nav').removeClass('show');
-             $('.menu_icon').addClass('icon-navicon').removeClass('icon-remove');
+             $('.menu_icon').addClass('icon-bars').removeClass('icon-close');
         }else{
             $('header').removeClass('scrollUp');
         }
@@ -16,7 +16,7 @@ $(function() {
 
     $('.menu_icon').on('click', function() {
         $('nav').toggleClass('show');
-        $(this).toggleClass('active').toggleClass('icon-navicon').toggleClass('icon-remove');
+        $(this).toggleClass('active').toggleClass('icon-bars').toggleClass('icon-close');
         })
 
     /*Scroll transition to anchor*/

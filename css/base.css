@@ -676,7 +676,7 @@ header nav ul li a {
 .contactInfo .info {
   font-size: 20px;
   font-weight: bold;
-  border-bottom: 1px dashed #CCC;
+  border-bottom: 1px dashed #2C2E2F;
   margin: 10px 0;
   padding-bottom: 5px;
 }
@@ -737,13 +737,11 @@ header nav ul li a {
 .contact-form textarea {
   vertical-align: top;
 }
-.contact-form select:before {
-  content: "\f0b1";
-}
 .contact-form .submit {
   cursor: pointer;
   border-radius: 5px;
   padding: 10px;
+  margin: 5px;
   color: #FFF;
   font-size: 14px;
   background: #FBCD65;
