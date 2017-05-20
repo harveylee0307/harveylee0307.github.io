@@ -551,6 +551,10 @@ header nav ul li a {
   color: #4F99D3;
 }
 
+.slick-dots {
+  position: inherit;
+}
+
 /*------------------------ Works section ------------------------*/
 #Works {
   background: #181D22;
