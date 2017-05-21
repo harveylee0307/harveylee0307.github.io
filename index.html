@@ -37,17 +37,28 @@
     <!-- ScrollReveal -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/3.3.5/scrollreveal.min.js"></script>
     <!-- validate -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>  
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
     <!-- frescojs -->
     <script src="js/lib/fresco-2.2.3-light/js/fresco.js"></script>
     <link rel="stylesheet" href="js/lib/fresco-2.2.3-light/css/fresco.css">
-
+    <!-- firebase -->
+    <script src="//www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyA9R7_rAB5_80KUqwz7orDF_QDkO2CAVhU",
+        authDomain: "harvey-website.firebaseapp.com",
+        databaseURL: "https://harvey-website.firebaseio.com",
+        projectId: "harvey-website",
+        storageBucket: "harvey-website.appspot.com",
+        messagingSenderId: "1048068322106"
+    };
+    firebase.initializeApp(config);
+    </script>
     <link rel="stylesheet" href="css/icon.css">
     <link rel="stylesheet" href="css/base.css">
     <script src="js/main.js"></script>
-
     <script src="js/anim.js"></script>
-
     <title>李皓偉 - Harvey Lee</title>
     <script>
     (function(i, s, o, g, r, a, m) {
@@ -440,7 +451,7 @@ aboutMe.Greeting();
                     </div>
                 </div>
                 <div class="contact-section pure-u-1 pure-u-md-1-2">
-                    <form id="contactForm" class="contact-form pure-g" method="get" action="">
+                    <form id="contactForm" class="contact-form pure-g" method="post" action="">
                         <!--Input columns-->
                         <div class="input-group pure-u-1 pure-u-sm-1-2">
                             <i class="icon-briefcase"></i>
@@ -451,11 +462,11 @@ aboutMe.Greeting();
                                 <option value="all">以上皆是</option>
                                 <option value="other">其他</option>
                             </select>
+                            <label class="icon-arrow_down"></label>
                         </div>
                         <div class="input-group pure-u-1 pure-u-sm-1-2">
                             <i class="icon-user"></i>
                             <input class="checkFalse" type="text" placeholder="請輸入您的稱呼*" value="" id="fName" name="fName">
-                           
                         </div>
                         <div class="input-group pure-u-1 pure-u-sm-1-2">
                             <i class="icon-envelope"></i>
@@ -468,7 +479,6 @@ aboutMe.Greeting();
                         <div class="input-group pure-u-1">
                             <i class="icon-commenting"></i>
                             <textarea class="checkFalse" name="fMessage" placeholder="聯絡事項*" id="fMessage" cols="45" rows="10"></textarea>
-                       
                         </div>
                         <!--End input columns-->
                         <input type="submit" value="SEND IT TO ME" class="submit">

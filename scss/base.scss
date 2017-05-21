@@ -820,11 +820,13 @@ header {
     textarea {
         vertical-align: top;
     }
-    select[name="messageType"]{
-     &:before{
-
+    .icon-arrow_down{
+    position: absolute;
+    color: #757575;
+    right: 10px;
+    font-size: 20px;
+    top: 15px;
      }
-    }
     .submit {
         cursor: pointer;
         border-radius: 5px;

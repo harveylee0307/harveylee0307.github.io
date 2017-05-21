@@ -69,6 +69,7 @@ $(function() {
             //方法一：直接把表單 POST 或 GET 到你的 Action URL
             //方法二：讀取某些欄位的資料，ajax 給別的 API。
             //此處測試方法一的寫法如下：
+            alert('感謝！已接收您的訊息！');
             form.submit();
         },
         rules: {
