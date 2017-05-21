@@ -70,6 +70,7 @@ $(function() {
             //方法二：讀取某些欄位的資料，ajax 給別的 API。
             //此處測試方法一的寫法如下：
             alert('感謝！已接收您的訊息！');
+            sendMessage();
             form.submit();
         },
         rules: {
@@ -85,16 +86,43 @@ $(function() {
             fPhone: 'digits',
             fEmail: 'email'
         },
-        messages: {            
-            fPhone:{digits:'本欄位請輸入數字'} ,
-            fEmail:{email:'請輸入正確的 Email 格式'},
+        messages: {
+            fPhone: { digits: '本欄位請輸入數字' },
+            fEmail: { email: '請輸入正確的 Email 格式' },
             fName: '必填 讓我知道您是誰',
             fMessage: '必填 讓我知道您想告訴我什麼',
         }
 
     });
 
-
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyA9R7_rAB5_80KUqwz7orDF_QDkO2CAVhU",
+        authDomain: "harvey-website.firebaseapp.com",
+        databaseURL: "https://harvey-website.firebaseio.com",
+        projectId: "harvey-website",
+        storageBucket: "harvey-website.appspot.com",
+        messagingSenderId: "1048068322106"
+    };
+    firebase.initializeApp(config);
+        var database = firebase.database(); 
+        var fType = $('select[name=messageType]');
+        var fName = $('input[name=fName]');
+        var fEmail = $('input[name=fEmail]');
+        var fPhone = $('input[name=fPhone]');
+        var fMessage = $('textarea[name=fMessage]');
+        function sendMessage(){
+        var ref = database.ref('contact');
+        var data = {
+            type:  fType.val(),
+            name: fName.val(),
+            email: fEmail.val(),
+            phone: fPhone.val(),
+            content: fMessage.val()
+        }
+        ref.push(data);
+        }
+    
     //-----------------slick----------------
     $('.skills').slick({
         dots: false,
@@ -156,5 +184,5 @@ $(function() {
 
 
 
-  
+
 });
