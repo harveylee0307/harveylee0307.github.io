@@ -605,6 +605,14 @@ header nav ul li a {
   color: white;
   font-weight: bold;
 }
+.works .work .workItem .workItemText span {
+  color: white;
+  font-size: 12px;
+  display: inline-block;
+  padding: 3px 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-right: 5px;
+}
 .works .work .workItem .workItemText .btn {
   position: absolute;
   right: 10px;
