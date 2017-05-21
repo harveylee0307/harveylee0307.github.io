@@ -781,13 +781,14 @@ header {
             color: #757575;
             font-size: 20px;
         }
-        .form_alert_text {
+       label.error{
             position: absolute;
             top: 15px;
             right: 15px;
             font-size: 13px;
             color: $color-yellow;
         }
+   
     }
     input,
     select,
@@ -803,10 +804,7 @@ header {
         overflow: hidden;
         resize: none;
         background: #2C2E2F;
-        &.checkOK {
-            border: 1px solid #49d267;
-        }
-        &.checkFalse {
+        &.error{
             border: 1px solid $color-yellow;
         }
     }

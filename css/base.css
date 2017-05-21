@@ -702,7 +702,7 @@ header nav ul li a {
   color: #757575;
   font-size: 20px;
 }
-.contact-form .input-group .form_alert_text {
+.contact-form .input-group label.error {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -724,14 +724,9 @@ header nav ul li a {
   resize: none;
   background: #2C2E2F;
 }
-.contact-form input.checkOK,
-.contact-form select.checkOK,
-.contact-form textarea.checkOK {
-  border: 1px solid #49d267;
-}
-.contact-form input.checkFalse,
-.contact-form select.checkFalse,
-.contact-form textarea.checkFalse {
+.contact-form input.error,
+.contact-form select.error,
+.contact-form textarea.error {
   border: 1px solid #FBCD65;
 }
 .contact-form textarea {

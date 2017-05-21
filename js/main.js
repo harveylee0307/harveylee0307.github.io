@@ -7,8 +7,8 @@ $(function() {
         if (scrollVal > lastScrollVal) {
             $('header').addClass('scrollUp');
             $('nav').removeClass('show');
-             $('.menu_icon').addClass('icon-bars').removeClass('icon-close');
-        }else{
+            $('.menu_icon').addClass('icon-bars').removeClass('icon-close');
+        } else {
             $('header').removeClass('scrollUp');
         }
         lastScrollVal = scrollVal;
@@ -17,7 +17,7 @@ $(function() {
     $('.menu_icon').on('click', function() {
         $('nav').toggleClass('show');
         $(this).toggleClass('active').toggleClass('icon-bars').toggleClass('icon-close');
-        })
+    })
 
     /*Scroll transition to anchor*/
     $("nav a").on('click', function(e) {
@@ -32,8 +32,6 @@ $(function() {
     /** Banner Parallax */
     $(window).scroll(function() {
         scrollBanner();
-
-
         // var bottom_of_object = $('#Portfolio').offset().top + $('#Portfolio').outerHeight();
         // var bottom_of_window = $(window).scrollTop() + $(window).height();
 
@@ -63,8 +61,37 @@ $(function() {
     };
 
 
+    //-----------------validate----------------
+    $("#contactForm").validate({
 
+        submitHandler: function(form) {
+            //驗證成功之後就會進到這邊：
+            //方法一：直接把表單 POST 或 GET 到你的 Action URL
+            //方法二：讀取某些欄位的資料，ajax 給別的 API。
+            //此處測試方法一的寫法如下：
+            form.submit();
+        },
+        rules: {
+            //你可以加上特殊的規則
+            //格式為  name:{規則名稱: true}，
+            //下方舉例的是 name == password 的 input 需要通過名為 hasUppercase 的規則驗證
+            //更簡單的作法是直接把 hasUppercase 的 class 加在該 input 的 html 上。
+            //password: {
+            //     hasUppercase: true
+            //}
+            fName: 'required',
+            fMessage: 'required',
+            fPhone: 'digits',
+            fEmail: 'email'
+        },
+        messages: {            
+            fPhone:{digits:'本欄位請輸入數字'} ,
+            fEmail:{email:'請輸入正確的 Email 格式'},
+            fName: '必填 讓我知道您是誰',
+            fMessage: '必填 讓我知道您想告訴我什麼',
+        }
 
+    });
 
 
     //-----------------slick----------------
@@ -127,7 +154,6 @@ $(function() {
 
 
     });
-
 
 
 
