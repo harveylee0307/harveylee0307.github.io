@@ -768,9 +768,21 @@ header {
         margin: 10px 0;
         padding-bottom: 5px;
         i {
+            position: relative;
+            display: inline-block;
             color: $color-yellow;
+             font-size: 16px;
+            width: 30px;
+            height: 30px;
+            margin-right: 5px;
             vertical-align: middle;
-            font-size: 26px;
+            border: 2px solid $color-yellow;
+            border-radius: 50%;
+            &:before{
+                position:absolute;
+                top:6px;
+                left:7px;
+            }
         }
     }
 }
@@ -818,14 +830,14 @@ header {
     textarea {
         vertical-align: top;
     }
-    label{
-       &.icon-arrow_down {
-        position: absolute;
-        color: #757575;
-        right: 10px;
-        font-size: 20px;
-        top: 15px;
-    }
+    label {
+        &.icon-arrow_down {
+            position: absolute;
+            color: #757575;
+            right: 10px;
+            font-size: 20px;
+            top: 15px;
+        }
     }
     .submit {
         cursor: pointer;
