@@ -71,7 +71,7 @@ $(function() {
             //此處測試方法一的寫法如下：
             alert('感謝！已接收您的訊息！');
             sendMessage();
-            form.submit();
+            // form.submit();
         },
         rules: {
             //你可以加上特殊的規則
