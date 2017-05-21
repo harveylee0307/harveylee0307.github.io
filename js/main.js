@@ -62,6 +62,8 @@ $(function() {
 
 
     //-----------------validate----------------
+
+
     $("#contactForm").validate({
 
         submitHandler: function(form) {
@@ -69,9 +71,9 @@ $(function() {
             //方法一：直接把表單 POST 或 GET 到你的 Action URL
             //方法二：讀取某些欄位的資料，ajax 給別的 API。
             //此處測試方法一的寫法如下：
+            // form.submit();
             alert('感謝！已接收您的訊息！');
             sendMessage();
-            // form.submit();
         },
         rules: {
             //你可以加上特殊的規則
@@ -105,24 +107,26 @@ $(function() {
         messagingSenderId: "1048068322106"
     };
     firebase.initializeApp(config);
-        var database = firebase.database(); 
-        var fType = $('select[name=messageType]');
-        var fName = $('input[name=fName]');
-        var fEmail = $('input[name=fEmail]');
-        var fPhone = $('input[name=fPhone]');
-        var fMessage = $('textarea[name=fMessage]');
-        function sendMessage(){
+    var database = firebase.database();
+    var fType = $('select[name=messageType]');
+    var fName = $('input[name=fName]');
+    var fEmail = $('input[name=fEmail]');
+    var fPhone = $('input[name=fPhone]');
+    var fMessage = $('textarea[name=fMessage]');
+
+    function sendMessage() {
         var ref = database.ref('contact');
         var data = {
-            type:  fType.val(),
+            type: fType.val(),
             name: fName.val(),
             email: fEmail.val(),
             phone: fPhone.val(),
             content: fMessage.val()
         }
         ref.push(data);
-        }
-    
+    $('#contactForm').find('input[type=text],textarea').val('');
+    }
+
     //-----------------slick----------------
     $('.skills').slick({
         dots: false,
