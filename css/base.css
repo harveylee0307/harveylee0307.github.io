@@ -741,7 +741,7 @@ header nav ul li a {
 .contact-form textarea {
   vertical-align: top;
 }
-.contact-form .icon-arrow_down {
+.contact-form label.icon-arrow_down {
   position: absolute;
   color: #757575;
   right: 10px;

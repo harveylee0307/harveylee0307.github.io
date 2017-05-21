@@ -282,16 +282,15 @@ header {
     // z-index:-1;
     // top:0;
     // left:0;
-
-    .fx-IMG{
-      background-image: url("../images/bg/topbg.jpg");
-      width: 100%;
-      height: 100%;
-      position: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      z-index: -1;
+    .fx-IMG {
+        background-image: url("../images/bg/topbg.jpg");
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
     }
     .topText {
         position: fixed;
@@ -430,7 +429,7 @@ header {
             .about-text {
                 width: 90%;
                 .talkbubble {
-                    &:after {                    
+                    &:after {
                         top: -15px;
                         left: 50%;
                         border-right-color: rgba(136, 183, 213, 0);
@@ -641,6 +640,7 @@ header {
     }
 }
 
+
 /*------------------------ Works section ------------------------*/
 
 #Works {
@@ -684,14 +684,14 @@ header {
                     color: white;
                     font-weight: bold;
                 }
-                span{
+                span {
                     color: white;
-                    font-size:12px;
-                    display:inline-block;
-                    padding:3px 5px;
-                    background-color: rgba(255,255,255,0.4);
-                    margin-right:5px;
-                    border-radius:3px;
+                    font-size: 12px;
+                    display: inline-block;
+                    padding: 3px 5px;
+                    background-color: rgba(255, 255, 255, 0.4);
+                    margin-right: 5px;
+                    border-radius: 3px;
                 }
                 .btn {
                     position: absolute;
@@ -755,24 +755,23 @@ header {
 }
 
 .contactInfo {
-    padding:0 20px;
+    padding: 0 20px;
     p {
         font-size: 14px;
         line-height: 1.5em;
         color: #CCC;
     }
-    .info{
-       font-size: 20px;
-       font-weight: bold;
-       border-bottom:1px dashed #2C2E2F;
-       margin: 10px 0;
-       padding-bottom: 5px;
-       i{
-        color: $color-yellow;
-        vertical-align: middle;
-       font-size:26px;
-
-       }
+    .info {
+        font-size: 20px;
+        font-weight: bold;
+        border-bottom: 1px dashed #2C2E2F;
+        margin: 10px 0;
+        padding-bottom: 5px;
+        i {
+            color: $color-yellow;
+            vertical-align: middle;
+            font-size: 26px;
+        }
     }
 }
 
@@ -781,8 +780,8 @@ header {
     .input-group {
         position: relative;
         margin-bottom: 5px;
-        padding:5px;
-        box-sizing:border-box;
+        padding: 5px;
+        box-sizing: border-box;
         i {
             position: absolute;
             top: 15px;
@@ -790,14 +789,13 @@ header {
             color: #757575;
             font-size: 20px;
         }
-       label.error{
+        label.error {
             position: absolute;
             top: 15px;
             right: 15px;
             font-size: 13px;
             color: $color-yellow;
         }
-   
     }
     input,
     select,
@@ -813,20 +811,22 @@ header {
         overflow: hidden;
         resize: none;
         background: #2C2E2F;
-        &.error{
+        &.error {
             border: 1px solid $color-yellow;
         }
     }
     textarea {
         vertical-align: top;
     }
-    .icon-arrow_down{
-    position: absolute;
-    color: #757575;
-    right: 10px;
-    font-size: 20px;
-    top: 15px;
-     }
+    label{
+       &.icon-arrow_down {
+        position: absolute;
+        color: #757575;
+        right: 10px;
+        font-size: 20px;
+        top: 15px;
+    }
+    }
     .submit {
         cursor: pointer;
         border-radius: 5px;
