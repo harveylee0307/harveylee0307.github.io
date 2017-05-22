@@ -159,6 +159,100 @@ h2 {
 }
 
 
+/*------------------------ loader  ------------------------*/
+
+// settings
+
+$loaderColor: #AAA;
+
+#loader {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background: $color-dgray;
+    z-index: 100;
+    .loader_content {
+        width: 500px;
+        height: 30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -35px 0 0 -250px;
+        .st-loader {
+            position: relative;
+            width: calc(90% - 60px);
+            height: 30px;
+              .st-text {
+            position: absolute;
+            right:-150px;
+            top:-5px;
+            font-size: 38px;
+            color: $loaderColor;
+            
+        }
+            &:before,
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 0.8em;
+                box-sizing: border-box;
+                border: 0.25em solid $loaderColor;
+            }
+            &:before {
+                left: 0;
+                border-right: 0;
+            }
+            &:after {
+                right: 0;
+                border-right: 0;
+                transform: rotate(180deg);
+            }
+            .equal {
+                position: absolute;
+                left: 0;
+                width: 30px;
+                height: 15px;
+                margin-top: 8px;
+                border: 0.25em solid $loaderColor;
+                box-sizing: border-box;
+                border-width: 0.25em 0;
+                animation: barbounce 1s infinite linear alternate;
+            }
+        }
+        .prg {
+            font-size: 38px;
+            color: $loaderColor;
+            float: right;
+        }
+    }
+}
+@include range-width(0,550px) {
+
+#loader{ .loader_content {
+        width: 230px;
+        height: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -35px 0 0 -150px;}
+    }
+   
+
+}
+
+@keyframes barbounce {
+    0% {
+        left: 10px;
+    }
+    100% {
+        left: calc(100% - 40px);
+    }
+}
+
+
 /*------------------------ header  ------------------------*/
 
 header {
@@ -191,7 +285,6 @@ header {
         font-size: 20px;
     }
     nav {
-        // display: block;
         float: right;
         ul {
             padding: 0;
@@ -326,13 +419,7 @@ header {
     }
 }
 
-// @include range-width(0,480px) {
-// #Top {
-//     .topText {
-//         padding-top: 180px;
-//     }
-// }
-// }
+
 
 /*------------------------ about section ------------------------*/
 
@@ -771,17 +858,17 @@ header {
             position: relative;
             display: inline-block;
             color: $color-yellow;
-             font-size: 16px;
+            font-size: 16px;
             width: 30px;
             height: 30px;
             margin-right: 5px;
             vertical-align: middle;
             border: 2px solid $color-yellow;
             border-radius: 50%;
-            &:before{
-                position:absolute;
-                top:6px;
-                left:7px;
+            &:before {
+                position: absolute;
+                top: 6px;
+                left: 7px;
             }
         }
     }

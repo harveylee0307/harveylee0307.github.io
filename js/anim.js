@@ -7,9 +7,10 @@ $(function() {
 
     // Customizing a reveal set
     sr.reveal('.avatar-section', { delay: 500 });
-    sr.reveal('.talkbubble ', { delay: 500 });
-    sr.reveal('code', { origin: 'top', delay: 800 });
+    sr.reveal('.talkbubble ', { delay: 800 });
+    sr.reveal('code', { origin: 'top', delay: 1200 });
 
+    sr.reveal('.timeItem', { origin: 'top', distance: '100px' });
     sr.reveal('.hgroup', { origin: 'left', distance: '100px', delay: 500, });
     sr.reveal('.duties', { origin: 'top', distance: '50px', delay: 500 });
 

@@ -1,6 +1,21 @@
 $(function() {
 
 
+
+    $(window).load(function() {
+       var c = 0;
+        var timer = setInterval(function() {
+        $('body').css('overflow','hidden');
+        c++;
+        $('.prg').text(c + '%');
+        if (c > 99) {
+            clearInterval(timer);
+            $('#loader').fadeOut(500);
+             $('body').css('overflow','visible');
+        }
+    }, 40);
+    });
+
     var lastScrollVal = 0
     $(window).scroll(function(e) {
         var scrollVal = $(this).scrollTop();
@@ -124,7 +139,7 @@ $(function() {
             content: fMessage.val()
         }
         ref.push(data);
-    $('#contactForm').find('input[type=text],textarea').val('');
+        $('#contactForm').find('input[type=text],textarea').val('');
     }
 
     //-----------------slick----------------
