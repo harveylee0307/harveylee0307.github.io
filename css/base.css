@@ -340,10 +340,41 @@ header nav ul li a {
   padding-top: 40vh;
   line-height: 3.3em;
 }
-#Top .type {
+#Top .topText .type {
   color: white;
-  border-bottom: 2px solid white;
+  border-bottom: 1px solid white;
   text-shadow: 1px 1px 2px #666;
+}
+#Top .scrolls {
+  color: white;
+  position: absolute;
+  left: calc(50% - 15px);
+  bottom: 10%;
+  text-align: center;
+}
+#Top .scrolls .mouse {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 5px;
+  height: 30px;
+  border: 2px solid #FFF;
+  border-radius: 12px;
+  font-size: 16px;
+}
+#Top .scrolls i {
+  font-size: 30px;
+  display: block;
+  animation: arrow 2s infinite;
+  margin-bottom: -20px;
+}
+#Top .scrolls i.a1 {
+  animation-delay: -1s;
+}
+#Top .scrolls i.a2 {
+  animation-delay: -0.5s;
+}
+#Top .scrolls i.a3 {
+  animation-delay: 0s;
 }
 
 .section-title {
@@ -366,6 +397,20 @@ header nav ul li a {
   color: #FBCD65;
 }
 
+@keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /*------------------------ about section ------------------------*/
 #About {
   background: #151718;

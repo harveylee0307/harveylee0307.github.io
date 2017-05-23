@@ -13,7 +13,7 @@ $(function() {
             $('#loader').fadeOut(500);
              $('body').css('overflow','visible');
         }
-    }, 40);
+    }, 35);
     });
 
     var lastScrollVal = 0
@@ -63,7 +63,7 @@ $(function() {
         scrollPos = $(this).scrollTop();
 
         /** Scroll and fade out the banner text */
-        $('.topText').css({
+        $('.topText,.scrolls').css({
             'opacity': 1 - (scrollPos / 210),
             '-ms-filter': 'progid:DXImageTransform.Microsoft.Alpha(Opacity=' + 1 - (scrollPos / 300) + ')'
         });

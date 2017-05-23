@@ -162,9 +162,7 @@ h2 {
 /*------------------------ loader  ------------------------*/
 
 // settings
-
 $loaderColor: #AAA;
-
 #loader {
     position: fixed;
     height: 100vh;
@@ -182,14 +180,13 @@ $loaderColor: #AAA;
             position: relative;
             width: calc(90% - 60px);
             height: 30px;
-              .st-text {
-            position: absolute;
-            right:-150px;
-            top:-5px;
-            font-size: 38px;
-            color: $loaderColor;
-            
-        }
+            .st-text {
+                position: absolute;
+                right: -150px;
+                top: -5px;
+                font-size: 38px;
+                color: $loaderColor;
+            }
             &:before,
             &:after {
                 content: "";
@@ -229,18 +226,18 @@ $loaderColor: #AAA;
         }
     }
 }
-@include range-width(0,550px) {
 
-#loader{ .loader_content {
-        width: 230px;
-        height: 20px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin: -35px 0 0 -150px;}
+@include range-width(0, 550px) {
+    #loader {
+        .loader_content {
+            width: 230px;
+            height: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -35px 0 0 -150px;
+        }
     }
-   
-
 }
 
 @keyframes barbounce {
@@ -391,11 +388,42 @@ header {
         text-align: center;
         padding-top: 40vh;
         line-height: 3.3em;
+        .type {
+            color: white;
+            border-bottom: 1px solid white;
+            text-shadow: 1px 1px 2px #666;
+        }
     }
-    .type {
+    .scrolls {
         color: white;
-        border-bottom: 2px solid white;
-        text-shadow: 1px 1px 2px #666;
+        position: absolute;
+        left:calc(50% - 15px);
+        bottom: 10%;
+            text-align: center;
+        .mouse{
+             display: block;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding:5px;
+            height:30px;
+            border:2px solid #FFF;
+            border-radius:12px;
+            font-size:16px;
+        }
+        i {
+            font-size: 30px;
+            display: block;
+            animation: arrow 2s infinite;
+            margin-bottom: -20px;
+            &.a1 {
+                animation-delay: -1s;
+            }
+            &.a2 {
+                animation-delay: -0.5s;
+            }
+            &.a3 {
+                animation-delay: 0s;
+            }
+        }
     }
 }
 
@@ -419,6 +447,20 @@ header {
     }
 }
 
+@keyframes arrow {
+    0% {
+        opacity: 0
+    }
+    40% {
+        opacity: 1
+    }
+    80% {
+        opacity: 0
+    }
+    100% {
+        opacity: 0
+    }
+}
 
 
 /*------------------------ about section ------------------------*/
